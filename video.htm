@@ -2,6 +2,77 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<script>
+
+//Alert message once script- By JavaScript Kit
+//Credit notice must stay intact for use
+//Visit http://javascriptkit.com for this script
+
+//specify message to alert
+var alertmessage="Se reproducen solos los videos no te espantes si escuchas todos haha"
+
+///No editing required beyond here/////
+
+//Alert only once per browser session (0=no, 1=yes)
+var once_per_session=1
+
+
+function get_cookie(Name) {
+  var search = Name + "="
+  var returnvalue = "";
+  if (document.cookie.length > 0) {
+    offset = document.cookie.indexOf(search)
+    if (offset != -1) { // if cookie exists
+      offset += search.length
+      // set index of beginning of value
+      end = document.cookie.indexOf(";", offset);
+      // set index of end of cookie value
+      if (end == -1)
+         end = document.cookie.length;
+      returnvalue=unescape(document.cookie.substring(offset, end))
+      }
+   }
+  return returnvalue;
+}
+
+function alertornot(){
+if (get_cookie('alerted')==''){
+loadalert()
+document.cookie="alerted=yes"
+}
+}
+
+function loadalert(){
+alert(alertmessage)
+}
+
+if (once_per_session==0)
+loadalert()
+else
+alertornot()
+
+</script>
+<script>
+
+/*
+Uphill Text effect
+By JavaScript Kit (http://javascriptkit.com)
+Over 400+ free scripts here!
+*/
+
+function uphilltext(text){
+var temptext=text.toUpperCase()
+var size=1
+//go through the text, letter by letter
+for (i=0;i<temptext.length;i++){
+document.write(temptext.charAt(i).fontsize(size).bold())
+if (size<7)
+size++
+else
+size=1
+}
+}
+</script>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <title>video</title>
 <style type="text/css">
@@ -30,10 +101,21 @@ MM_reloadPage(true);
 
 <body>
 <div id="Layer1" style="position:absolute; left:331px; top:21px; width:715px; height:113px; z-index:1">
-  <div align="center"><span class="style1">VIDEOS</span></div>
+  <div align="center"><script>
+uphilltext("Unos videos que me gustan espero sea de su agrado")
+</script></div>
 </div>
-<div id="Layer2" style="position:absolute; left:345px; top:180px; width:694px; height:266px; z-index:2">
-  <embed src="../../../Downloads/y2meta.com%20-%20Higurashi%20no%20Naku%20Koro%20ni%20Gou%20(2020)%20Opening.mp4" width="695" height="266"></embed>
+<div id="Layer2" style="position:absolute; left:353px; top:185px; width:331px; height:208px; z-index:2">
+  <embed src="y2meta.com%20-%20Higurashi%20no%20Naku%20Koro%20ni%20Gou%20(2020)%20Opening.mp4" width="327" height="207"></embed>
+</div>
+<div id="Layer2" style="position:absolute; left:692px; top:182px; width:331px; height:208px; z-index:2">
+  <embed src="y2mate.com%20-%20FLOW%20GRANRODEO%20%20Howling_1080p.mp4" width="330" height="212"></embed>
+</div>
+<div id="Layer2" style="position:absolute; left:1042px; top:180px; width:331px; height:208px; z-index:2">
+  <embed src="y2mate.com%20-%20&#12471;&#12489;%20delete_1080p.mp4" width="330" height="215"></embed>
+</div>
+<div id="Layer2" style="position:absolute; left:12px; top:185px; width:331px; height:212px; z-index:2">
+  <embed src="y2mate.com%20-%20Baki%202018%20Opening%201%20Sub%20espa&#241;ol_720p.mp4" width="329" height="208"></embed>
 </div>
 </body>
 </html>

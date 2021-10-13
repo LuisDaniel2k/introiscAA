@@ -23,7 +23,7 @@ body {
 </style></head>
 
 <body>
-<div id="Layer1" style="position:absolute; left:369px; top:60px; width:590px; height:454px; z-index:1">
+<div id="Layer1" style="position:absolute; left:368px; top:117px; width:590px; height:454px; z-index:1">
   <table width="588" border="1">
     <tr>
       <td width="32">NO.</td>
@@ -112,5 +112,47 @@ body {
     </tr>
   </table>
 </div>
+<div id="Layer2" style="position:absolute; left:382px; top:15px; width:595px; height:78px; z-index:2">
+  <script>
+//set style for NS4 to ''
+if (document.layers)
+var ns4def=''
+</script>
+
+<h2 id="flyin" style="position:relative;left:-800px;font-style:italic" style=&{ns4def};>Aqui el numero de mis compañeros de clase :3</h2>
+
+
+<script language="JavaScript1.2">
+
+/*
+Fly-in Header script (credit must stay enclosed)
+By javascriptkit.com
+For this and over 400+ JavaScripts,
+Visit http://www.javascriptkit.com
+*/
+
+
+if (document.getElementById||document.all)
+var crossheader=document.getElementById? document.getElementById("flyin").style : document.all.flyin.style
+
+function animatein(){
+if (parseInt(crossheader.left)<0)
+crossheader.left=parseInt(crossheader.left)+20+"px"
+else{
+crossheader.left=0
+crossheader.fontStyle="normal"
+clearInterval(start)
+}
+}
+
+if (document.getElementById||document.all)
+start=setInterval("animatein()",50)
+
+
+</script>
+
+<p align="center"><br />
+<a href="http://javascriptkit.com">
+</a></p></div>
 </body>
 </html>

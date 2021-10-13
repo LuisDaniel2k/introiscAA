@@ -13,12 +13,142 @@ body {
 	color: #FFFFFF;
 	font-size: 24px;
 }
+.styling {background-color:black;
+color:lime;
+font: bold 16px MS Sans Serif;
+padding: 3px;
+}
 -->
 </style></head>
 
 <body>
 <div id="Layer3" style="position:absolute; left:570px; top:11px; width:522px; height:51px; z-index:3">
-  <div align="center"><span class="style1">Introduccion a la ingeneria en sistemas computacionales </span></div>
+  <div align="center"><span class="style1"><b>
+    <script>
+
+/*
+RAINBOW TEXT Script by Matt Hedgecoe (c) 2002
+Featured on JavaScript Kit
+For this script, visit http://www.javascriptkit.com
+*/
+
+// ********** MAKE YOUR CHANGES HERE
+
+var text="Ingeneria en sistemas computacionales" // YOUR TEXT
+var speed=80 // SPEED OF FADE
+
+// ********** LEAVE THE NEXT BIT ALONE!
+
+
+if (document.all||document.getElementById){
+document.write('<span id="highlight">' + text + '</span>')
+var storetext=document.getElementById? document.getElementById("highlight") : document.all.highlight
+}
+else
+document.write(text)
+var hex=new Array("00","14","28","3C","50","64","78","8C","A0","B4","C8","DC","F0")
+var r=1
+var g=1
+var b=1
+var seq=1
+function changetext(){
+rainbow="#"+hex[r]+hex[g]+hex[b]
+storetext.style.color=rainbow
+}
+function change(){
+if (seq==6){
+b--
+if (b==0)
+seq=1
+}
+if (seq==5){
+r++
+if (r==12)
+seq=6
+}
+if (seq==4){
+g--
+if (g==0)
+seq=5
+}
+if (seq==3){
+b++
+if (b==12)
+seq=4
+}
+if (seq==2){
+r--
+if (r==0)
+seq=3
+}
+if (seq==1){
+g++
+if (g==12)
+seq=2
+}
+changetext()
+}
+function starteffect(){
+if (document.all||document.getElementById)
+flash=setInterval("change()",speed)
+}
+starteffect()
+</script>
+  </b></span></div>
+</div>
+<div id="Layer5" style="position:absolute; left:162px; top:9px; width:187px; height:65px; z-index:5"><span id="digitalclock" class="styling"></span>
+    <script>
+<!--
+
+//LCD Clock script- by javascriptkit.com
+//Visit JavaScript Kit (http://javascriptkit.com) for script
+//Credit must stay intact for use
+
+var alternate=0
+var standardbrowser=!document.all&&!document.getElementById
+
+if (standardbrowser)
+document.write('<form name="tick"><input type="text" name="tock" size="11"></form>')
+
+function show(){
+if (!standardbrowser)
+var clockobj=document.getElementById? document.getElementById("digitalclock") : document.all.digitalclock
+var Digital=new Date()
+var hours=Digital.getHours()
+var minutes=Digital.getMinutes()
+var dn="AM"
+
+if (hours==12) dn="PM" 
+if (hours>12){
+dn="PM"
+hours=hours-12
+}
+if (hours==0) hours=12
+if (hours.toString().length==1)
+hours="0"+hours
+if (minutes<=9)
+minutes="0"+minutes
+
+if (standardbrowser){
+if (alternate==0)
+document.tick.tock.value=hours+" : "+minutes+" "+dn
+else
+document.tick.tock.value=hours+"   "+minutes+" "+dn
+}
+else{
+if (alternate==0)
+clockobj.innerHTML=hours+" : "+minutes+" "+"<sup style='font-size:70%'>"+dn+"</sup>"
+else
+clockobj.innerHTML=hours+" : "+minutes+" "+"<sup style='font-size:70%'>"+dn+"</sup>"
+}
+alternate=(alternate==0)? 1 : 0
+setTimeout("show()",1000)
+}
+window.onload=show
+
+//-->
+  </script>
+    <p>&nbsp;</p>
 </div>
 </body>
 </html>

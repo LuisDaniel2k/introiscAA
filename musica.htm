@@ -2,6 +2,56 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<script>
+
+//Alert message once script- By JavaScript Kit
+//Credit notice must stay intact for use
+//Visit http://javascriptkit.com for this script
+
+//specify message to alert
+var alertmessage="Antes de continuar la musica se reproduce sola no te estpantes xd"
+
+///No editing required beyond here/////
+
+//Alert only once per browser session (0=no, 1=yes)
+var once_per_session=1
+
+
+function get_cookie(Name) {
+  var search = Name + "="
+  var returnvalue = "";
+  if (document.cookie.length > 0) {
+    offset = document.cookie.indexOf(search)
+    if (offset != -1) { // if cookie exists
+      offset += search.length
+      // set index of beginning of value
+      end = document.cookie.indexOf(";", offset);
+      // set index of end of cookie value
+      if (end == -1)
+         end = document.cookie.length;
+      returnvalue=unescape(document.cookie.substring(offset, end))
+      }
+   }
+  return returnvalue;
+}
+
+function alertornot(){
+if (get_cookie('alerted')==''){
+loadalert()
+document.cookie="alerted=yes"
+}
+}
+
+function loadalert(){
+alert(alertmessage)
+}
+
+if (once_per_session==0)
+loadalert()
+else
+alertornot()
+
+</script>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <title>musica</title>
 <style type="text/css">
@@ -28,15 +78,87 @@ MM_reloadPage(true);
 </head>
 
 <body>
-<div id="Layer1" style="position:absolute; left:257px; top:17px; width:802px; height:110px; z-index:1">
-  <div align="center" class="style1">MUSICA</div>
-</div>
 <div id="Layer3" style="position:absolute; left:451px; top:156px; width:404px; height:327px; z-index:3">
-  <embed src="../../../Downloads/y2meta.com%20-%20Stratovarius%20-%20I%20Walk%20To%20My%20Own%20Song%20(320%20kbps).mp3" width="403" height="303" align="baseline"></embed>
+  <embed src="y2meta.com%20-%20Stratovarius%20-%20I%20Walk%20To%20My%20Own%20Song%20(320%20kbps).mp3" width="400" height="322"></embed>
 </div>
 <div id="Layer2" style="position:absolute; left:1120px; top:65px; width:240px; height:421px; z-index:4"><img src="1b8b70241da34561042f542d0ec60c4a.jpg" width="236" height="418"></div>
 
 <div id="Layer4" style="position:absolute; left:198px; top:193px; width:189px; height:162px; z-index:5"><img src="cute-anime-dancing.gif" width="220" height="205"></div>
 
+<div id="Layer1" style="position:absolute; left:307px; top:27px; width:719px; height:107px; z-index:6"><b>
+
+<script>
+
+/*
+RAINBOW TEXT Script by Matt Hedgecoe (c) 2002
+Featured on JavaScript Kit
+For this script, visit http://www.javascriptkit.com
+*/
+
+// ********** MAKE YOUR CHANGES HERE
+
+var text="RAINBOW TEXT" // YOUR TEXT
+var speed=80 // SPEED OF FADE
+
+// ********** LEAVE THE NEXT BIT ALONE!
+
+
+if (document.all||document.getElementById){
+document.write('<span id="highlight">' + text + '</span>')
+var storetext=document.getElementById? document.getElementById("highlight") : document.all.highlight
+}
+else
+document.write(text)
+var hex=new Array("00","14","28","3C","50","64","78","8C","A0","B4","C8","DC","F0")
+var r=1
+var g=1
+var b=1
+var seq=1
+function changetext(){
+rainbow="#"+hex[r]+hex[g]+hex[b]
+storetext.style.color=rainbow
+}
+function change(){
+if (seq==6){
+b--
+if (b==0)
+seq=1
+}
+if (seq==5){
+r++
+if (r==12)
+seq=6
+}
+if (seq==4){
+g--
+if (g==0)
+seq=5
+}
+if (seq==3){
+b++
+if (b==12)
+seq=4
+}
+if (seq==2){
+r--
+if (r==0)
+seq=3
+}
+if (seq==1){
+g++
+if (g==12)
+seq=2
+}
+changetext()
+}
+function starteffect(){
+if (document.all||document.getElementById)
+flash=setInterval("change()",speed)
+}
+starteffect()
+</script>
+</b>
+
+<p align="center">This free script provided by<br /><a href="http://javascriptkit.com">JavaScript Kit</a></p></div>
 </body>
 </html>

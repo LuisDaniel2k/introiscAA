@@ -28,13 +28,50 @@ MM_reloadPage(true);
 </head>
 
 <body>
-<div id="Layer1" style="position:absolute; left:317px; top:3px; width:667px; height:552px; z-index:1">
-  <p align="center" class="style1">Contacto:</p>
+<div id="Layer1" style="position:absolute; left:321px; top:6px; width:667px; height:489px; z-index:1">
+  <p align="center" class="style1">&nbsp;</p>
   <p align="center" class="style1">Nombre: Huerta Dorantes Luis Daniel</p>
   <p align="center" class="style1">Numero: 5530752299</p>
   <p align="center" class="style1">FB: You Watanabe  </p>
 </div>
 
-<div id="Layer2" style="position:absolute; left:464px; top:325px; width:340px; height:153px; z-index:2"><img src="Captura.PNG" width="383" height="182"></div>
+<div id="Layer2" style="position:absolute; left:472px; top:371px; width:340px; height:153px; z-index:2"><img src="Captura.PNG" width="383" height="182"></div>
+<div id="Layer3" style="position:absolute; left:479px; top:4px; width:657px; height:58px; z-index:3">
+  <script>
+
+/*
+Roller Coaster Script-
+By JavaScript Kit
+Over 200+ free scripts here!
+*/
+
+var fs=1
+var direction="right"
+function rollertext(whichone){
+var thetext=whichone
+for (i=0;i<thetext.length;i++){
+document.write(thetext.charAt(i).fontsize(fs))
+
+if (fs<7&&direction=="right")
+fs++
+else if (fs==7){
+direction="left"
+fs--
+}
+else if (fs==1){
+direction="right"
+fs++
+}
+else if (fs>1&&direction=="left")
+fs--
+
+}
+}
+//Change below text to your won
+rollertext("Contacto del creador de esta pagina web")
+</script>
+
+<p align="center"><font face="arial" size="-2"></font><br>
+<font face="arial, helvetica" size="-2"><a href="http://javascriptkit.com"></a></font></p></div>
 </body>
 </html>
